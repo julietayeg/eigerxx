@@ -1,34 +1,34 @@
 /* Fonts */
 @font-face {
   font-family: "inter-regular"; 
-  src: url("../fonts/Inter/Inter-Regular.otf");
+  src: url("C:/Users/User/Desktop/task/eigerx/fonts/Inter/Inter-Regular.otf");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "inter-semibold"; 
-  src: url("../fonts/Inter/Inter-SemiBold.otf");
+  src: url("C:/Users/User/Desktop/task/eigerx/fonts/Inter/Inter-SemiBold.otf");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "mattone"; 
-  src: url("../fonts/Mattone/Mattone-Regular.otf");
+  src: url("C:/Users/User/Desktop/task/eigerx/fonts/Mattone/Mattone-Regular.otf");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "nohemi-semibold"; 
-  src: url("../fonts/Nohemi/Nohemi-SemiBold-BF6438cc588b5e5.otf");
+  src: url("C:/Users/User/Desktop/task/eigerx/fonts/Nohemi/Nohemi-SemiBold-BF6438cc588b5e5.otf");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "SFProDisplay-bold"; 
-  src: url("../fonts/SFProDisplay/FontsFree-Net-SFProDisplay-Bold.ttf");
+  src: url("C:/Users/User/Desktop/task/eigerx/fonts/SFProDisplay/FontsFree-Net-SFProDisplay-Bold.ttf");
   font-style: normal;
   font-weight: normal;
 }
@@ -38,6 +38,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body{
   background: linear-gradient(133deg, #211A1A 0%, #212127 100%)
 }
@@ -48,7 +49,6 @@ input:focus::-webkit-input-placeholder {
   color : transparent;
    opacity : 0;
 }
-
 
 
 .container{
@@ -63,82 +63,97 @@ input:focus::-webkit-input-placeholder {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  background: #211e22;
+  position: sticky;
+  top:0;
+  z-index: 99;
+
 }
 
 .logo{
   display:flex;
   align-items: baseline;
   text-decoration: none;
-  
-  div:first-child{
+}
+
+.logo div:first-child{
     color: #24FFBC; 
     font-size: 32px; 
     font-family: nohemi-semibold; 
     letter-spacing: 0.96px; 
   }
 
-  div:last-child{
+.logo div:last-child{
     color: #f5f5f5;
     font-size: 32px;
     font-family:mattone; 
     font-weight: 600;
 
   }
-}
+  
+
 
 .profile{
   position:relative;
-  ul{
+}
+
+.profile ul{
     list-style: none;
     display: flex;
   }
-  li{
+
+.profile li{
     top: 0px; 
     position: absolute;
 
   }
-  li:nth-child(1){
+
+.profile  li:nth-child(1){
     left:-68px;
     z-index: 3;
   }
-  li:nth-child(2) {
+
+.profile li:nth-child(2) {
     left:-34px;
     z-index: 2;
   }
-  li:nth-child(3){
+
+.profile li:nth-child(3){
     left:0;
   }
 
-  a{text-decoration: none;}
-  img{
+.profile  a{
+  text-decoration: none;
+}
+
+.profile  img{
     width:40px;
     height: 40px;
     border:2px solid #0B0B0F;
     border-radius: 20px;
   }
   
-}
+
 
 /* Message */
-.content{
-  .greatings{
-    padding:100px 20px 16px 20px;
-    span{
+
+.greatings{
+  padding:100px 20px 16px 20px;
+  }
+
+.greatings span{
     font-family: SFProDisplay-bold;
     font-size: 32px;
     line-height: 38px;
     color:#fff;
     display: block;
   }
-  span:first-child{
+
+.greatings span:first-child{
     opacity: 70%;
-  };
   }
   
-}
-
-.message-container{
-  label{
+.message-container label{
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -152,21 +167,7 @@ input:focus::-webkit-input-placeholder {
 
   }
 
-  button{
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-
-  button:hover{
-    svg{
-      opacity: 0.8;
-    }      
-  
-    }
-
-  input{
+  .message-container input{
     outline: none;
     border: none;
     background: transparent;
@@ -177,7 +178,19 @@ input:focus::-webkit-input-placeholder {
     font-family: inter-regular; 
     line-height: 21px; 
   }
+
+.send-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 0 0 5px;
+    display: flex;
 }
+
+.send-btn:hover svg{
+    opacity: 0.8;
+}
+
 
 .input-container{
   width: 100%;
@@ -212,6 +225,10 @@ input:focus::-webkit-input-placeholder {
   caret-color: #F5F5F5;
   background: #1B1E22;
   
+}
+
+.search-icon{
+  display: flex;
 }
 
 .search-content input:focus {
@@ -258,6 +275,10 @@ input:focus::-webkit-input-placeholder {
 /* Footer */
 
 .footer{
+  position: sticky;
+  bottom: 16px;
+  width: 100%;
+  z-index: 99;
   height: 81px;
   display: flex;
   justify-content: space-around;
@@ -312,5 +333,3 @@ input:focus::-webkit-input-placeholder {
    stroke: #24FFBC;
    color:#24FFBC
 }
-
-.show {display:block;}
